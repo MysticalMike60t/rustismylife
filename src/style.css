@@ -29,7 +29,7 @@ body {
     justify-content: center;
     flex-direction: column;
     background: var(--background-color);
-    animation: delay 2s ease-in-out forwards;
+    animation: delay 5s ease-in-out forwards;
 }
 
 .wrapper {
@@ -180,6 +180,10 @@ body {
 
 @keyframes delay {
     0% {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    75% {
         opacity: 0;
         transform: translateY(-50px);
     }
