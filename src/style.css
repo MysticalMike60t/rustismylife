@@ -30,6 +30,7 @@ body {
     flex-direction: column;
     background: var(--background-color);
     animation: fadein 1s ease-in-out forwards;
+    overflow: hidden;
 }
 
 .loading {
@@ -174,6 +175,18 @@ body {
     animation: spinny 60s linear infinite;
     position: absolute;
     z-index: -1;
+    user-select: none;
+    -ms-user-select: none;
+    -moz-user-select: none;
+    -webkit-user-drag: none;
+    -webkit-user-modify: none;
+    -webkit-user-select: none;
+    -moz-user-focus: none;
+    -moz-user-input: none;
+    -moz-user-modify: none;
+    -ms-touch-select: none;
+    -moz-window-dragging: none;
+    pointer-events: none;
 }
 
 @keyframes pluhwalk {
