@@ -1,7 +1,10 @@
 {
-    "name": "rustismylife",
-    "compatibility_date": "2026-01-22",
-    "assets": {
-        "directory": "./src"
-    }
+  "name": "rustismylife",
+  "compatibility_date": "2026-01-22",
+  "assets": {
+    "directory": "./src",
+  },
+  "observability": {
+    "enabled": false,
+  },
 }
