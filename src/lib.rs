@@ -9,5 +9,6 @@ extern "C" {
 
 #[wasm_bindgen]
 pub fn greet() {
-    alert("Hello, rustismylife!");
+    let name: &str = "Butter";
+    alert(format!("Hello, {}", name).as_str());
 }
