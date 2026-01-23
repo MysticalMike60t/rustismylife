@@ -4,6 +4,60 @@
   <img src="https://img.shields.io/badge/rustup%20toolchain-=%20v1.81.0-orange.svg" />
 </p>
 
+<details>
+
+<summary>Process Graph</summary>
+
+<!-- prettier-ignore-start -->
+> [!WARNING]
+> This is a work in progress[^1], therefor it may be inacurate.
+<!-- prettier-ignore-end -->
+
+```mermaid
+---
+config:
+  flowchart:
+    htmlLabels: false
+  layout: elk
+---
+flowchart TB
+ subgraph s1["Nodejs Frontend"]
+        nodejsfrontend["Nodejs Frontend"]
+        n3["Webpack"]
+  end
+ subgraph s2["Rust Backend"]
+        rustbackend["lib"]
+        webassembly["WebAssembly"]
+        n5["wasm-bindgen"]
+  end
+    webassembly --> nodejsfrontend
+    nodejsfrontend --> n3
+    n3 --> n4["Static Files (to be served)"]
+    rustbackend L_rustbackend_n5_0@<--> n5
+    n5 --> webassembly
+
+    n3@{ shape: out-in}
+    webassembly@{ shape: lean-l}
+    n5@{ shape: subproc}
+    style nodejsfrontend fill:#BBDEFB,stroke:none,color:#000000
+    style n3 fill:#BBDEFB,stroke:none,color:#000000
+    style rustbackend fill:#C8E6C9,stroke:#C8E6C9,color:#000000
+    style webassembly fill:#BBDEFB,stroke:none,color:#000000
+    style n5 fill:#FFE0B2,stroke:#FFE0B2,color:#000000
+    style n4 fill:#FFF9C4,stroke:none,color:#000000
+    style s2 fill:transparent,stroke:none,color:#FFFFFF
+    style s1 fill:transparent,stroke:none,color:#FFFFFF
+    linkStyle 0 stroke:#FFFFFF,fill:none
+    linkStyle 1 stroke:#FFFFFF,fill:none
+    linkStyle 2 stroke:#FFFFFF,fill:none
+    linkStyle 3 stroke:#FFFFFF,fill:none
+    linkStyle 4 stroke:#FFFFFF,fill:none
+
+    L_rustbackend_n5_0@{ animation: none }
+```
+
+</details>
+
 <h2 align="center" name="dev-setup">Dev Setup</h2>
 
 Prepare 2 seperate terminals.
@@ -22,7 +76,7 @@ Then every time you update the Rust backend using `build.sh`, it will automatica
 
 <!-- prettier-ignore-start -->
 > [!TIP]
-> If any of these scripts result in errors while running the [scripts](#dev-scripts-order), refer to the **node** & **toolchain**[^1] [versions](#version-badges) above, and run each command in the `.sh` files seperately.
+> If any of these scripts result in errors while running the [scripts](#dev-scripts-order), refer to the **node** & **toolchain**[^2] [versions](#version-badges) above, and run each command in the `.sh` files seperately.
 <!-- prettier-ignore-end -->
 
 Feel free to make a pull request that fixes any issues you encounter!
@@ -61,12 +115,5 @@ nano list.txt # USAGE While editing this file, each item gets it's own line
 
 </details>
 
-```mermaid
-graph TD;
-    A-->B;
-    A-->C;
-    B-->D;
-    C-->D;
-```
-
-[^1]: The specific version for the **rustup toolchain** is a temporary fix, this will be changed soon.
+[^1]: This project is a work in progress, so there will be issues or shitty code for a while.
+[^2]: The specific version for the **rustup toolchain** is a temporary fix, this will be changed soon.
