@@ -17,8 +17,15 @@ In terminal 1, Run these scripts in order:
 Then every time you update the Rust backend using `build.sh`, it will automatically update your local live development server.
 
 <!-- prettier-ignore-start -->
-> [!WARNING]
-> If any of these scripts result in errors, refer to the **node** & **toolchain** versions above, and run each command in the `.sh` files seperately.
+> [!TIP]
+> If any of these scripts result in errors, refer to the **node** & **toolchain**[^1] versions above, and run each command in the `.sh` files seperately.
 <!-- prettier-ignore-end -->
 
 Feel free to make a pull request that fixes any issues you encounter!
+
+<!-- prettier-ignore-start -->
+> [!WARNING]
+> This project is a work in progress, please be nice :3
+<!-- prettier-ignore-end -->
+
+[^1]: The specific version for the **rustup toolchain** is a temporary fix, this will be changed soon.
