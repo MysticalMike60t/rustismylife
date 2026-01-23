@@ -56,6 +56,8 @@ flowchart TB
     L_rustbackend_n5_0@{ animation: none }
 ```
 
+To edit this interactively, go [here](https://mermaid.ai/play) and paste the code inside `\`\`\`mermaid ... \`\`\``.
+
 </details>
 
 <h2 align="center" name="dev-setup">Dev Setup</h2>
