@@ -32,4 +32,33 @@ Feel free to make a pull request that fixes any issues you encounter!
 > This project is a work in progress, please be nice :3
 <!-- prettier-ignore-end -->
 
+<h2>Misc Info</h2>
+
+<details>
+
+<summary>.vscode folder</summary>
+
+The `.vscode` folder is included since I currently use it for a lot of my projects, and it provides a lot of visual and workflow enhancements that make development faster and easier.
+
+The syntax for this is (in a `.sh` script example):
+```sh
+#:&
+# INFO:
+```
+Both do the exact same thing, but the `:&` is the shorthand version of `INFO` (you do not need `:`).
+
+This applies to every type. You can look in the `.vscode/settings.json` file under `todo-tree.general.tags` and `todo-tree.general.tagGroups` for everything you can use.
+
+This also works *inline*:
+```sh
+cat list.txt #:& This reads the list.txt file
+cat list.txt # INFO: This reads the list.txt file
+```
+Also:
+```sh
+nano list.txt # USAGE While editing this file, each item gets it's own line
+```
+
+</details>
+
 [^1]: The specific version for the **rustup toolchain** is a temporary fix, this will be changed soon.
