@@ -6,7 +6,6 @@
         "bierner.markdown-preview-github-styles",
         "darkriszty.markdown-table-prettify",
         "mads-hartmann.bash-ide-vscode",
-        "ms-vscode.powershell",
         "formulahendry.code-runner",
         "nguyenngoclong.terminal-keeper",
         "nilssoderman.batch-runner",
@@ -17,17 +16,13 @@
         "oderwat.indent-rainbow",
         "zainchen.json",
         "natqe.reload",
-        "ionutvmi.reg",
-        "ms-vscode.remote-explorer",
         "shardulm94.trailing-spaces",
         "redhat.vscode-yaml",
         "tamasfe.even-better-toml",
-        "ms-vscode-remote.remote-ssh",
         "alefragnani.bookmarks",
         "wmaurer.change-case",
         "streetsidesoftware.code-spell-checker",
         "13xforever.language-x86-64-assembly",
-        "redhat.vscode-xml",
         "mrmlnc.vscode-duplicate"
     ]
 }
