@@ -83,11 +83,6 @@ Then every time you update the Rust backend using `build.sh`, it will automatica
 
 Feel free to make a pull request that fixes any issues you encounter!
 
-<!-- prettier-ignore-start -->
-> [!WARNING]
-> This project is a work in progress, please be nice :3
-<!-- prettier-ignore-end -->
-
 <h2>Misc Info</h2>
 
 <details>
