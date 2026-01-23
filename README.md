@@ -56,14 +56,7 @@ flowchart TB
     L_rustbackend_n5_0@{ animation: none }
 ```
 
-To edit this interactively, go [here](https://mermaid.ai/play) and paste the code inside:
-```md
-```mermaid
-
-  ......
-
-```
-```
+To edit this interactively, go [here](https://mermaid.ai/play) and paste the code inside the `mermaid` code block above.
 
 </details>
 
