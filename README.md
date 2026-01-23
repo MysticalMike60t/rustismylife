@@ -61,4 +61,12 @@ nano list.txt # USAGE While editing this file, each item gets it's own line
 
 </details>
 
+```mermaid
+graph TD;
+    A-->B;
+    A-->C;
+    B-->D;
+    C-->D;
+```
+
 [^1]: The specific version for the **rustup toolchain** is a temporary fix, this will be changed soon.
