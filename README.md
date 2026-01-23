@@ -1,24 +1,28 @@
 <h1 align="center">Rust is my Life</h1>
-<p align="center">
+<p align="center" name="version-badges">
   <img src="https://img.shields.io/badge/node->=%20v24.13.0-brightgreen.svg" />
   <img src="https://img.shields.io/badge/rustup%20toolchain-=%20v1.81.0-orange.svg" />
 </p>
 
-<h2 align="center">Dev Setup</h2>
+<h2 align="center" name="dev-setup">Dev Setup</h2>
 
 Prepare 2 seperate terminals.
 
 In terminal 1, Run these scripts in order:
 
+<p name="dev-scripts-order">
+
 1. `build.sh`
 2. `install_deps.sh`
 3. `start_dev.sh`
+
+</p>
 
 Then every time you update the Rust backend using `build.sh`, it will automatically update your local live development server.
 
 <!-- prettier-ignore-start -->
 > [!TIP]
-> If any of these scripts result in errors, refer to the **node** & **toolchain**[^1] versions above, and run each command in the `.sh` files seperately.
+> If any of these scripts result in errors while running the [scripts](#dev-scripts-order), refer to the **node** & **toolchain**[^1] [versions](#version-badges) above, and run each command in the `.sh` files seperately.
 <!-- prettier-ignore-end -->
 
 Feel free to make a pull request that fixes any issues you encounter!
