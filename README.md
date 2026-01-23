@@ -4,14 +4,14 @@
   <img src="https://img.shields.io/badge/rustup%20toolchain-=%20v1.81.0-orange.svg" />
 </p>
 
-<details>
-
-<summary>Process Graph</summary>
-
 <!-- prettier-ignore-start -->
 > [!WARNING]
-> This is a work in progress[^1], therefor it may be inacurate.
+> The [Progress Graph](#process-graph) is a work in progress[^1], therefor it may be inacurate.
 <!-- prettier-ignore-end -->
+
+<details name="process-graph">
+
+<summary>Process Graph</summary>
 
 ```mermaid
 ---
