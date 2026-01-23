@@ -1,7 +1,7 @@
 [package]
 name = "rustismylife"
 version = "0.1.0"
-authors = ["Butter <wuffles187@proton.me>"]
+authors = ["MysicalMike60t <me@cadenf.com>", "Feytrace <feytrace@proton.me>"]
 edition = "2018"
 
 [lib]
