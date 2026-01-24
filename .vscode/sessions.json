@@ -6,18 +6,18 @@
   "keepExistingTerminals": false,
   "noClear": true,
   "sessions": {
-    "Tests": [
+    "Defaults (you should run these)": [
       {
-        "name": "Cargo Check",
+        "name": "Install Dependencies",
         "autoExecuteCommands": true,
-        "icon": "debug-alt",
-        "color": "terminal.ansiGreen",
+        "icon": "desktop-download",
+        "color": "terminal.ansiMagenta",
         "commands": [
-          "cargo check"
+          "rustup target add wasm32-unknown-unknown",
+          "cargo install cargo-generate",
+          "cargo install --locked"
         ]
-      }
-    ],
-    "Before Build / Release": [
+      },
       {
         "name": "Format Code",
         "autoExecuteCommands": true,
@@ -25,6 +25,66 @@
         "color": "terminal.ansiBrightCyan",
         "commands": [
           "cargo fmt"
+        ]
+      },
+      {
+        "name": "Cargo Check",
+        "autoExecuteCommands": true,
+        "icon": "debug-alt",
+        "color": "terminal.ansiRed",
+        "commands": [
+          "cargo check"
+        ]
+      }
+    ],
+    "Dev Server Start": [
+      {
+        "name": "Start local dev server",
+        "autoExecuteCommands": true,
+        "icon": "server",
+        "color": "terminal.ansiMagenta",
+        "commands": [
+          "trunk serve"
+        ]
+      }
+    ],
+    "Build release": [
+      {
+        "name": "Install Dependencies",
+        "autoExecuteCommands": true,
+        "icon": "desktop-download",
+        "color": "terminal.ansiMagenta",
+        "commands": [
+          "rustup target add wasm32-unknown-unknown",
+          "cargo install cargo-generate",
+          "cargo install trunk --locked"
+        ]
+      },
+      {
+        "name": "Format Code",
+        "autoExecuteCommands": true,
+        "icon": "paintcan",
+        "color": "terminal.ansiBrightCyan",
+        "commands": [
+          "cargo fmt"
+        ]
+      },
+      {
+        "name": "Cargo Check",
+        "autoExecuteCommands": true,
+        "icon": "debug-alt",
+        "color": "terminal.ansiRed",
+        "commands": [
+          "cargo check"
+        ]
+      },
+      {
+        "name": "Run build (release)",
+        "autoExecuteCommands": true,
+        "icon": "tools",
+        "color": "terminal.ansiBlue",
+        "commands": [
+          "trunk build --release --dist dist"
         ]
       }
     ]
