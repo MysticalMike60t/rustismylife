@@ -1,6 +1,5 @@
 {
   "name": "rustismylife",
-  "main": "handler/index.js",
   "compatibility_date": "2026-01-22",
   "observability": {
     "enabled": false
