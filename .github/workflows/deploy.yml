@@ -18,7 +18,7 @@ jobs:
       - name: Install trunk # Add fail handling in case binstall fails (cargo install trunk)
         run: cargo binstall trunk
       - name: Build
-        run: trunk build --release --dist dist
+        run: trunk build --release
       - name: Check if dist directory exists
         run: ls -la dist
       - name: Build & Deploy Worker
