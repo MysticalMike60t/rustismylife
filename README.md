@@ -18,9 +18,10 @@
 ```mermaid
 ---
 config:
-  flowchart:
-    htmlLabels: false
-  layout: dagre
+  layout: elk
+  elk:
+    mergeEdges: true
+    nodePlacementStrategy: LINEAR_SEGMENTS
   look: classic
   theme: redux-dark
 ---
