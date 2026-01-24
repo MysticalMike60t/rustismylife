@@ -1,4 +1,4 @@
 #:& I will probably forget this command tbh, lol
 
-#:& Build with Trunk
-trunk build
+#:& Build release with Trunk
+trunk build --release
