@@ -16,12 +16,12 @@ jobs:
           targets: wasm32-unknown-unknown
       - name: Install trunk
         run: cargo install trunk
+      - name: Install Binaryen
+        run: sudo apt install binaryen -y
       - name: Build
         run: trunk build --release --dist dist
       - name: Check if dist directory exists
         run: ls -la dist
-      - name: Install Binaryen
-        run: sudo apt install binaryen -y
       - name: Build & Deploy Worker
         uses: cloudflare/wrangler-action@v3
         with:
