@@ -60,6 +60,10 @@ To edit this interactively, go [here](https://mermaid.ai/play) and paste the cod
 
 </details>
 
+## TODO
+
+- [ ] Make site function perfectly without `_redirects` file.
+
 <h2 align="center" name="dev-setup">Dev Setup</h2>
 
 Prepare 2 seperate terminals.
