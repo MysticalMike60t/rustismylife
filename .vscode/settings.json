@@ -1,0 +1,237 @@
+{
+  "files.exclude": {
+    "**/.git": false
+  },
+  "todo-tree.general.tags": [
+    "TODO",
+    ":>",
+    "INFO",
+    ":&",
+    "QUESTION",
+    ":?",
+    "HELP",
+    ":<",
+    "FIXME",
+    ":#",
+    "WARNING",
+    ":%",
+    "ERROR",
+    ":!",
+    "PLACEHOLDER",
+    ":*",
+    "RESOURCE",
+    ":@",
+    "DOCUMENTATION",
+    "DOCS",
+    "WIKI",
+    "INACTIVE",
+    "DONT DELETE",
+    "STOP",
+    "DO NOT TOUCH",
+    "TITLE",
+    ":.",
+    "SECTION_LAYER_1",
+    "##",
+    "SECTION_LAYER_2",
+    "###",
+    "HEADER",
+    "#|",
+    "HOW TO USE",
+    "USAGE",
+    "INSERT",
+    "BUG"
+  ],
+  "todo-tree.general.tagGroups": {
+    "TODO": ["TODO", ":>"],
+    "INFO": ["INFO", ":&"],
+    "QUESTION": ["QUESTION", ":?"],
+    "HELP": ["HELP", ":<"],
+    "FIXME": ["FIXME", ":#"],
+    "WARNING": ["WARNING", ":%"],
+    "ERROR": ["ERROR", ":!", "BUG"],
+    "PLACEHOLDER": ["PLACEHOLDER", ":*"],
+    "RESOURCE": ["RESOURCE", ":@", "DOCUMENTATION", "DOCS", "WIKI"],
+    "INACTIVE": ["INACTIVE", "DONT DELETE"],
+    "STOP": ["STOP", "DO NOT TOUCH"],
+    "TITLE": ["TITLE", ":."],
+    "SECTION_LAYER_1": ["SECTION_LAYER_1", "##"],
+    "SECTION_LAYER_2": ["SECTION_LAYER_2", "###"],
+    "HEADER": ["HEADER", "#|"],
+    "USAGE": ["USAGE", "HOW TO USE"],
+    "INSERT": ["INSERT"]
+  },
+  "todo-tree.highlights.defaultHighlight": {
+    "icon": "alert",
+    "type": "text",
+    "foreground": "red",
+    "background": "none",
+    "opacity": 50,
+    "iconColour": "blue",
+    "borderRadius": "0"
+  },
+  "todo-tree.highlights.customHighlight": {
+    "TODO": {
+      "icon": "check",
+      "type": "whole-line",
+      "background": "#5E265B",
+      "foreground": "#F285ED",
+      "iconColour": "#B39CB8",
+      "gutterIcon": true
+    },
+    "INFO": {
+      "icon": "info",
+      "type": "text-and-comment",
+      "background": "none",
+      "foreground": "#62A5F5",
+      "iconColour": "#2E8CFF",
+      "gutterIcon": true,
+      "hideFromTree": true,
+      "hideFromStatusBar": true,
+      "hideFromActivityBar": true
+    },
+    "QUESTION": {
+      "icon": "question",
+      "type": "line",
+      "background": "#184232",
+      "foreground": "#53E6AF",
+      "iconColour": "#36FFB5",
+      "gutterIcon": true
+    },
+    "HELP": {
+      "icon": "broadcast",
+      "type": "whole-line",
+      "background": "#171642",
+      "foreground": "#7D7BE8",
+      "iconColour": "#4D4AE0",
+      "gutterIcon": true
+    },
+    "FIXME": {
+      "icon": "tools",
+      "type": "whole-line",
+      "background": "#10394A",
+      "foreground": "#32B5ED",
+      "iconColour": "#2EC4FF",
+      "gutterIcon": true
+    },
+    "WARNING": {
+      "icon": "alert",
+      "type": "whole-line",
+      "background": "#523212",
+      "foreground": "#F09F4F",
+      "iconColour": "#FFA629",
+      "gutterIcon": true
+    },
+    "ERROR": {
+      "icon": "circle-slash",
+      "type": "whole-line",
+      "background": "#541313",
+      "foreground": "#F75C5C",
+      "iconColour": "#FF2929",
+      "gutterIcon": true,
+      "fontWeight": "900"
+    },
+    "PLACEHOLDER": {
+      "icon": "bold",
+      "type": "line",
+      "background": "#2A2E20",
+      "foreground": "#C9D6A9",
+      "iconColour": "#DDF2AA",
+      "gutterIcon": true
+    },
+    "RESOURCE": {
+      "icon": "repo",
+      "type": "whole-line",
+      "background": "#172942",
+      "foreground": "#86ADE3",
+      "iconColour": "#599FFF",
+      "gutterIcon": true,
+      "hideFromTree": true,
+      "hideFromStatusBar": true,
+      "hideFromActivityBar": true
+    },
+    "INACTIVE": {
+      "icon": "x",
+      "type": "line",
+      "background": "#382C18",
+      "foreground": "#F0C67F",
+      "iconColour": "#FFBC4A",
+      "gutterIcon": true,
+      "hideFromTree": true,
+      "hideFromStatusBar": true,
+      "hideFromActivityBar": true
+    },
+    "STOP": {
+      "icon": "stop",
+      "type": "whole-line",
+      "background": "#3D1212",
+      "foreground": "#F77777",
+      "iconColour": "#F22C2C",
+      "gutterIcon": true,
+      "hideFromTree": true,
+      "hideFromStatusBar": true,
+      "hideFromActivityBar": true
+    },
+    "TITLE": {
+      "icon": "mortar-board",
+      "type": "whole-line",
+      "background": "#6B370F",
+      "foreground": "#F57E20",
+      "iconColour": "#F57E20",
+      "gutterIcon": true,
+      "hideFromTree": true,
+      "hideFromStatusBar": true,
+      "hideFromActivityBar": true
+    },
+    "SECTION_LAYER_1": {
+      "icon": "square-fill",
+      "type": "whole-line",
+      "background": "#3B3B3B",
+      "foreground": "#E3E3E3",
+      "iconColour": "#8f8f8f",
+      "gutterIcon": true,
+      "hideFromTree": true
+    },
+    "SECTION_LAYER_2": {
+      "icon": "square-fill",
+      "type": "whole-line",
+      "background": "#262626",
+      "foreground": "#E3E3E3",
+      "iconColour": "#4a4a4a",
+      "gutterIcon": true,
+      "hideFromTree": true
+    },
+    "HEADER": {
+      "icon": "megaphone",
+      "type": "line",
+      "background": "#573E2B",
+      "foreground": "#F2A86D",
+      "iconColour": "#F29D5A",
+      "gutterIcon": true,
+      "hideFromTree": true,
+      "hideFromStatusBar": true,
+      "hideFromActivityBar": true
+    },
+    "USAGE": {
+      "icon": "info",
+      "type": "tag",
+      "background": "none",
+      "foreground": "#62A5F5",
+      "iconColour": "#2E8CFF",
+      "gutterIcon": true,
+      "hideFromTree": true,
+      "hideFromStatusBar": true,
+      "hideFromActivityBar": true
+    },
+    "INSERT": {
+      "icon": "info",
+      "type": "tag",
+      "background": "none",
+      "foreground": "#62A5F5",
+      "iconColour": "#2E8CFF",
+      "gutterIcon": true,
+      "hideFromTree": true,
+      "hideFromStatusBar": true,
+      "hideFromActivityBar": true
+    }
+  }
+}

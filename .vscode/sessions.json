@@ -1,0 +1,32 @@
+{
+  "$schema": "https://cdn.statically.io/gh/nguyenngoclongdev/cdn/main/schema/v11/terminal-keeper.json",
+  "theme": "tribe",
+  "active": "Tests",
+  "activateOnStartup": true,
+  "keepExistingTerminals": false,
+  "noClear": true,
+  "sessions": {
+    "Tests": [
+      {
+        "name": "Cargo Check",
+        "autoExecuteCommands": true,
+        "icon": "debug-alt",
+        "color": "terminal.ansiGreen",
+        "commands": [
+          "cargo check"
+        ]
+      }
+    ],
+    "Before Build / Release": [
+      {
+        "name": "Format Code",
+        "autoExecuteCommands": true,
+        "icon": "paintcan",
+        "color": "terminal.ansiBrightCyan",
+        "commands": [
+          "cargo fmt"
+        ]
+      }
+    ]
+  }
+}
