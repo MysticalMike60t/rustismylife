@@ -5,3 +5,18 @@ address = "127.0.0.1"
 # INACTIVE: address = "0.0.0.0"
 # INFO: The port to serve on.
 port = 8000
+
+[build]
+minify = "on_release"
+
+[[hooks]]
+stage = "post_build"
+command = "sh"
+command_arguments = ["-c", """
+if [ $TRUNK_PROFILE = "release" ]; then
+  for f in $TRUNK_STAGING_DIR/*.wasm; do
+    [ -f $f ] || continue
+    wasm-opt -Oz $f -o $f
+  done
+fi
+"""]
