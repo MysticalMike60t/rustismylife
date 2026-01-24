@@ -111,18 +111,6 @@ To edit this interactively, go [here](https://mermaid.ai/play) and paste the cod
 
 </details>
 
-## Plans
-
-```mermaid
-kanban
-[Currently planned implementations]
-    id1[Output JS and CSS minify]
-    id2[More intelligently triggered builds]
-    id3[Page Router]
-    id4[Suspense and Loading handling]
-    id5[Enhanced metadata and SEO]
-```
-
 <h2 align="center" name="dev-setup">Dev Setup</h2>
 
 Run these scripts in order:
