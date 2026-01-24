@@ -1,5 +1,6 @@
 name: Deploy
 
+# TODO: Make builds & deploys not be triggered by .md, comments, etc
 on:
   push:
     branches: [ main ]
