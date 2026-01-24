@@ -13,8 +13,10 @@ jobs:
         uses: dtolnay/rust-toolchain@stable
         with:
           targets: wasm32-unknown-unknown
-      - name: Install trunk
-        run: cargo install trunk --locked
+      - name: Install cargo-binstall
+        uses: cargo-bins/cargo-binstall@v1.10.4
+      - name: Install trunk (prebuilt)
+        run: cargo binstall -y trunk
       - name: Build
         run: trunk build --release --dist dist
       - name: Check if dist directory exists
@@ -24,4 +26,3 @@ jobs:
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-          workingDirectory: "dist"
