@@ -8,16 +8,17 @@ jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v4
       - name: Install Rust
         uses: dtolnay/rust-toolchain@stable
         with:
           targets: wasm32-unknown-unknown
       - name: Install trunk
         run: cargo install trunk --locked
-      - uses: actions/checkout@v4
       - name: Build
-        run: trunk build --release
-      - uses: actions/checkout@v4
+        run: trunk build --release --dist dist
+      - name: Check if dist directory exists
+        run: ls -la dist
       - name: Build & Deploy Worker
         uses: cloudflare/wrangler-action@v3
         with:
