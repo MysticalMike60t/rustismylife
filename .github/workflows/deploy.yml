@@ -14,10 +14,10 @@ jobs:
         uses: dtolnay/rust-toolchain@stable
         with:
           targets: wasm32-unknown-unknown
+      - name: Install binstall
+        run: cargo install cargo-binstall
       - name: Install trunk
-        run: cargo install trunk
-      - name: Install Binaryen
-        run: sudo apt install binaryen -y
+        run: cargo binstall trunk
       - name: Build
         run: trunk build --release --dist dist
       - name: Check if dist directory exists

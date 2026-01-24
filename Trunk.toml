@@ -9,14 +9,16 @@ port = 8000
 [build]
 minify = "on_release"
 
-[[hooks]]
-stage = "post_build"
-command = "sh"
-command_arguments = ["-c", """
-if [ $TRUNK_PROFILE = "release" ]; then
-  for f in $TRUNK_STAGING_DIR/*.wasm; do
-    [ -f $f ] || continue
-    wasm-opt -Oz $f -o $f
-  done
-fi
-"""]
+# INACTIVE: We don't need this right now, but just in case, I'm going to keep it
+# [[hooks]]
+# stage = "post_build"
+# command = "sh"
+# command_arguments = ["-c", """
+# if [ $TRUNK_PROFILE = "release" ]; then
+#   for f in $TRUNK_STAGING_DIR/*.wasm; do
+#     [ -f $f ] || continue
+#     echo "$f"
+#     wasm-opt -Oz $f -o $f
+#   done
+# fi
+# """]
