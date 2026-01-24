@@ -62,45 +62,45 @@ flowchart TB
      n19:::Basic
      n20:::Basic
      n15:::Basic
-    classDef Aqua stroke-width:1px, stroke-dasharray:none, stroke:#46EDC8, fill:#DEFFF8, color:#378E7A
-    classDef Basic stroke:#616161, fill:#424242, color:#FFFFFF
-    style webassembly fill:#624DEA,stroke:#616161,color:#FFFFFF
-    style n4 fill:#424242,stroke:#616161,color:#FFFFFF
-    style n6 fill:#27CDA9,stroke:#616161,color:#424242
-    style n11 fill:#B55731,stroke:#616161
-    style n7 stroke:#616161,fill:#A64938,color:#FFFFFF
-    style n8 fill:#424242,stroke:#616161
-    style n10 stroke:#616161,fill:#424242
-    style n5 fill:#F0772B,stroke:#616161,color:#FFFFFF
+    classDef Aqua stroke-width:1px, stroke-dasharray:none, stroke:#3B424B, fill:#DEFFF8, color:#378E7A
+    classDef Basic stroke:#3B424B, fill:#0D1116, color:#FFFFFF
+    style webassembly fill:#624DEA,stroke:#3B424B,color:#FFFFFF
+    style n4 fill:#0D1116,stroke:#3B424B,color:#FFFFFF
+    style n6 fill:#27CDA9,stroke:#3B424B,color:#424242
+    style n11 fill:#B55731,stroke:#3B424B
+    style n7 stroke:#3B424B,fill:#A64938,color:#FFFFFF
+    style n8 fill:#0D1116,stroke:#3B424B
+    style n10 stroke:#3B424B,fill:#0D1116
+    style n5 fill:#F0772B,stroke:#3B424B,color:#FFFFFF
     style n19 fill:#F0DB4F,color:#424242
     style n20 fill:#0270B2
-    style n9 stroke:#616161,fill:#424242
-    style n14 stroke:#616161,fill:#CD6799,color:#FFFFFF
-    style n12 stroke:#616161,fill:#424242
-    style n13 stroke:#616161,fill:#424242
-    style n15 fill:#424242,stroke:#616161
-    style n16 fill:#424242,stroke:#616161
-    style n17 fill:#F48120,stroke:#616161,color:#FFFFFF
-    style n18 fill:#424242,stroke:#616161
-    linkStyle 0 stroke:#616161,fill:none
-    linkStyle 1 stroke:#616161,fill:none
-    linkStyle 2 stroke:#616161,fill:none
-    linkStyle 3 stroke:#616161,fill:none
-    linkStyle 4 stroke:#616161,fill:none
-    linkStyle 5 stroke:#616161,fill:none
-    linkStyle 6 stroke:#616161,fill:none
-    linkStyle 7 stroke:#616161,fill:none
-    linkStyle 8 stroke:#616161,fill:none
-    linkStyle 9 stroke:#616161,fill:none
-    linkStyle 10 stroke:#616161,fill:none
-    linkStyle 11 stroke:#616161,fill:none
-    linkStyle 12 stroke:#616161,fill:none
-    linkStyle 13 stroke:#616161,fill:none
-    linkStyle 14 stroke:#616161,fill:none
-    linkStyle 15 stroke:#616161,fill:none
-    linkStyle 16 stroke:#616161,fill:none
-    linkStyle 17 stroke:#616161,fill:none
-    linkStyle 18 stroke:#616161,fill:none
+    style n9 stroke:#3B424B,fill:#0D1116
+    style n14 stroke:#3B424B,fill:#CD6799,color:#FFFFFF
+    style n12 stroke:#3B424B,fill:#0D1116
+    style n13 stroke:#3B424B,fill:#0D1116
+    style n15 fill:#0D1116,stroke:#3B424B
+    style n16 fill:#0D1116,stroke:#3B424B
+    style n17 fill:#F48120,stroke:#3B424B,color:#FFFFFF
+    style n18 fill:#0D1116,stroke:#3B424B
+    linkStyle 0 stroke:#3B424B,fill:none
+    linkStyle 1 stroke:#3B424B,fill:none
+    linkStyle 2 stroke:#3B424B,fill:none
+    linkStyle 3 stroke:#3B424B,fill:none
+    linkStyle 4 stroke:#3B424B,fill:none
+    linkStyle 5 stroke:#3B424B,fill:none
+    linkStyle 6 stroke:#3B424B,fill:none
+    linkStyle 7 stroke:#3B424B,fill:none
+    linkStyle 8 stroke:#3B424B,fill:none
+    linkStyle 9 stroke:#3B424B,fill:none
+    linkStyle 10 stroke:#3B424B,fill:none
+    linkStyle 11 stroke:#3B424B,fill:none
+    linkStyle 12 stroke:#3B424B,fill:none
+    linkStyle 13 stroke:#3B424B,fill:none
+    linkStyle 14 stroke:#3B424B,fill:none
+    linkStyle 15 stroke:#3B424B,fill:none
+    linkStyle 16 stroke:#3B424B,fill:none
+    linkStyle 17 stroke:#3B424B,fill:none
+    linkStyle 18 stroke:#3B424B,fill:none
 ```
 
 To edit this interactively, go [here](https://mermaid.ai/play) and paste the code inside the `mermaid` code block above.
