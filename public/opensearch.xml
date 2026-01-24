@@ -1,0 +1,8 @@
+<OpenSearchDescription xmlns="http://a9.com/-/spec/opensearch/1.1/"
+    xmlns:moz="http://www.mozilla.org/2006/browser/search/">
+    <ShortName>Rust is my life</ShortName>
+    <Description>Fun project for nerds :3</Description>
+    <!-- <Image height="16" width="16" type="image/x-icon">https://rustismy.life/favicon.ico</Image> -->
+    <InputEncoding>UTF-8</InputEncoding>
+    <!-- <Url type="text/html" template="https://rustismy.life/search?search={searchTerms}" /> -->
+</OpenSearchDescription>

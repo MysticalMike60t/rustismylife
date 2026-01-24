@@ -1,0 +1,20 @@
+/* TEAM */
+
+Developers: MysticalMike60t, Feytrace
+Email: me@cadenf.com, feytrace@proton.me
+
+/* THANKS */
+
+Special thanks to:
+
+- Open-source libraries and frameworks used in this project
+- Contributors who reported bugs or submitted pull requests
+
+/* SITE */
+
+Project: rustismylife
+URL: https://rustismy.life
+
+/* COPYRIGHT */
+
+Copyright © %%year%% %%publicName%%

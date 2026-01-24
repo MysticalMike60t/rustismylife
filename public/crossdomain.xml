@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<!DOCTYPE cross-domain-policy SYSTEM "http://www.macromedia.com/xml/dtds/cross-domain-policy.dtd">
+<cross-domain-policy>
+    <!-- Allow requests from all domains -->
+    <allow-access-from domain="*" />
+    <allow-http-request-headers-from domain="*.rustismy.life" headers="*" secure="false" />
+    <!-- Optional: Specify additional attributes like secure and headers -->
+    <!-- <allow-http-request-headers-from domain="*.example.com" headers="*" secure="false" /> -->
+</cross-domain-policy>
