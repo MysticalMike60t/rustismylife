@@ -1,10 +1,13 @@
 {
   "name": "rustismylife",
+  "main": "handler/index.js",
   "compatibility_date": "2026-01-22",
   "assets": {
-    "directory": "./src",
+    "directory": "./dist",
+    "binding": "ASSETS",
+    "not_found_handling": "single-page-application"
   },
   "observability": {
-    "enabled": false,
-  },
+    "enabled": false
+  }
 }
