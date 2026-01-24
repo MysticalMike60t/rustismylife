@@ -24,54 +24,25 @@ config:
   theme: redux-dark
 ---
 flowchart TB
- subgraph s1["Build"]
-        webassembly["WebAssembly"]
-        n4["Static Files (to be served)"]
-        n7["Trunk"]
-        n19["JavaScript Files"]
-        n20["CSS Files"]
-        n17["Cloudflare Worker"]
-        n18["wrangler.jsonc"]
-        n14["dart-sass"]
-  end
- subgraph s2["Code / Repo files"]
-        n6["Yew"]
-        n11["Rust files"]
-        n8["Public folder"]
-        n10["Assets"]
-        n5["index.html"]
-        n9["SCSS Stylesheets"]
-        n12["Fonts"]
-        n13["Images"]
-        n15["Sitemaps"]
-        n16["Misc SEO files"]
-        n21["Sitemap XSLT Sylesheet"]
-  end
-    webassembly --> n4
-    n6 --- n11
-    n11 --> n7
-    n8 --> n7
-    n10 --> n7
-    n5 --> n7
-    n7 --> webassembly & n19 & n20
-    n9 --> n14
+    webassembly["WebAssembly"] --> n4["Static Files (to be served)"]
+    n6["Yew"] --- n11["Rust files"]
+    n11 --> n7["Trunk"]
+    n8["Public folder"] --> n7
+    n10["Assets"] --> n7
+    n5["index.html"] --> n7
+    n7 --> webassembly & n19["JavaScript Files"] & n20["CSS Files"]
+    n9["SCSS Stylesheets"] --> n14["dart-sass"]
     n14 --> n7
-    n12 --- n10
-    n13 --- n10
-    n15 --- n8
-    n16 --- n8
-    n4 --> n17
-    n18 --- n17
+    n12["Fonts"] --- n10
+    n13["Images"] --- n10
+    n15["Sitemaps"] --- n8
+    n16["Misc SEO files"] --- n8
+    n4 --> n17["Cloudflare Worker"]
+    n18["wrangler.jsonc"] --- n17
     n19 --> n4
     n20 --> n4
-    n21 --- n15
+    n21["Sitemap XSLT Sylesheet"] --- n15
 
-    webassembly@{ shape: lean-l}
-    n7@{ shape: proc}
-    n19@{ shape: doc}
-    n20@{ shape: doc}
-    n17@{ shape: proc}
-    n18@{ shape: doc}
     n6@{ shape: procs}
     n11@{ shape: docs}
     n8@{ shape: docs}
@@ -83,20 +54,19 @@ flowchart TB
     n15@{ shape: docs}
     n16@{ shape: docs}
     n21@{ shape: doc}
+    webassembly@{ shape: lean-l}
+    n7@{ shape: proc}
+    n19@{ shape: doc}
+    n20@{ shape: doc}
     n14@{ shape: proc}
-     n19:::Basic
-     n20:::Basic
+    n17@{ shape: proc}
+    n18@{ shape: doc}
      n15:::Basic
      n21:::Basic
+     n19:::Basic
+     n20:::Basic
     classDef Aqua stroke-width:1px, stroke-dasharray:none, stroke:#3B424B, fill:#DEFFF8, color:#378E7A
     classDef Basic stroke:3B424B, fill:#0D1116, color:#FFFFFF
-    style webassembly fill:#624DEA,stroke:#3B424B,color:#FFFFFF
-    style n4 fill:#0D1116,stroke:#3B424B,color:#FFFFFF
-    style n7 stroke:#3B424B,fill:#A64938,color:#FFFFFF
-    style n19 fill:#F0DB4F,stroke:#3B424B,color:#424242
-    style n20 fill:#0270B2,stroke:#3B424B
-    style n17 fill:#DE7723,stroke:#3B424B,color:#FFFFFF
-    style n18 fill:#0D1116,stroke:#3B424B
     style n6 fill:#27CDA9,stroke:#3B424B,color:#424242
     style n11 fill:#B85B2E,stroke:#3B424B
     style n8 fill:#0D1116,stroke:#3B424B
@@ -108,9 +78,14 @@ flowchart TB
     style n15 fill:#0D1116,stroke:#3B424B
     style n16 fill:#0D1116,stroke:#3B424B
     style n21 fill:#0D1116,stroke:#3B424B
+    style webassembly fill:#624DEA,stroke:#3B424B,color:#FFFFFF
+    style n4 fill:#0D1116,stroke:#3B424B,color:#FFFFFF
+    style n7 stroke:#3B424B,fill:#A64938,color:#FFFFFF
+    style n19 fill:#F0DB4F,stroke:#3B424B,color:#424242
+    style n20 fill:#0270B2,stroke:#3B424B
     style n14 stroke:#3B424B,fill:#CD6799,color:#FFFFFF
-    style s1 fill:#141A21,stroke:#24282E
-    style s2 fill:#141A21,stroke:#24282E
+    style n17 fill:#DE7723,stroke:#3B424B,color:#FFFFFF
+    style n18 fill:#0D1116,stroke:#3B424B
     linkStyle 0 stroke:#3B424B,fill:none
     linkStyle 1 stroke:#3B424B,fill:none
     linkStyle 2 stroke:#3B424B,fill:none
