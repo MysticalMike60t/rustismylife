@@ -22,6 +22,7 @@ jobs:
       - name: Build
         run: trunk build --release
   deploy:
+    needs: build
     runs-on: ubuntu-latest
     timeout-minutes: 60
     steps:
