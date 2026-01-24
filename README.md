@@ -20,42 +20,87 @@
 config:
   flowchart:
     htmlLabels: false
-  layout: elk
+  layout: dagre
+  theme: redux-dark
 ---
 flowchart TB
- subgraph s1["Nodejs Frontend"]
-        nodejsfrontend["Nodejs Frontend"]
-        n3["Webpack"]
-  end
- subgraph s2["Rust Backend"]
-        rustbackend["lib"]
-        webassembly["WebAssembly"]
-        n5["wasm-bindgen"]
-  end
-    webassembly --> nodejsfrontend
-    nodejsfrontend --> n3
-    n3 --> n4["Static Files (to be served)"]
-    rustbackend L_rustbackend_n5_0@<--> n5
-    n5 --> webassembly
+    webassembly["WebAssembly"] --> n4["Static Files (to be served)"]
+    n6["Yew"] --- n11["Rust files"]
+    n11 --> n7["Trunk"]
+    n8["Public folder"] --> n7
+    n10["Assets"] --> n7
+    n5["index.html"] --> n7
+    n7 --> webassembly & n19["JavaScript Files"] & n20["CSS Files"]
+    n9["Stylesheets"] --> n14["dart-sass"]
+    n14 --> n7
+    n12["Fonts"] --- n10
+    n13["Images"] --- n10
+    n15["Sitemaps"] --- n8
+    n16["Misc SEO files"] --- n8
+    n4 --> n17["Cloudflare Worker"]
+    n18["wrangler.jsonc"] --> n17
+    n19 --> n4
+    n20 --> n4
 
-    n3@{ shape: out-in}
     webassembly@{ shape: lean-l}
-    n5@{ shape: subproc}
-    style nodejsfrontend fill:#BBDEFB,stroke:none,color:#000000
-    style n3 fill:#BBDEFB,stroke:none,color:#000000
-    style rustbackend fill:#C8E6C9,stroke:#C8E6C9,color:#000000
-    style webassembly fill:#BBDEFB,stroke:none,color:#000000
-    style n5 fill:#FFE0B2,stroke:#FFE0B2,color:#000000
-    style n4 fill:#FFF9C4,stroke:none,color:#000000
-    style s2 fill:transparent,stroke:none,color:#FFFFFF
-    style s1 fill:transparent,stroke:none,color:#FFFFFF
-    linkStyle 0 stroke:#FFFFFF,fill:none
-    linkStyle 1 stroke:#FFFFFF,fill:none
-    linkStyle 2 stroke:#FFFFFF,fill:none
-    linkStyle 3 stroke:#FFFFFF,fill:none
-    linkStyle 4 stroke:#FFFFFF,fill:none
-
-    L_rustbackend_n5_0@{ animation: none }
+    n6@{ shape: procs}
+    n11@{ shape: docs}
+    n7@{ shape: proc}
+    n8@{ shape: docs}
+    n10@{ shape: docs}
+    n5@{ shape: doc}
+    n19@{ shape: doc}
+    n20@{ shape: doc}
+    n9@{ shape: docs}
+    n14@{ shape: proc}
+    n12@{ shape: docs}
+    n13@{ shape: docs}
+    n15@{ shape: docs}
+    n16@{ shape: docs}
+    n17@{ shape: proc}
+    n18@{ shape: doc}
+     n19:::Basic
+     n20:::Basic
+     n15:::Basic
+    classDef Aqua stroke-width:1px, stroke-dasharray:none, stroke:#46EDC8, fill:#DEFFF8, color:#378E7A
+    classDef Basic stroke:#616161, fill:#424242, color:#FFFFFF
+    style webassembly fill:#624DEA,stroke:#616161,color:#FFFFFF
+    style n4 fill:#424242,stroke:#616161,color:#FFFFFF
+    style n6 fill:#27CDA9,stroke:#616161,color:#424242
+    style n11 fill:#B55731,stroke:#616161
+    style n7 stroke:#616161,fill:#A64938,color:#FFFFFF
+    style n8 fill:#424242,stroke:#616161
+    style n10 stroke:#616161,fill:#424242
+    style n5 fill:#F0772B,stroke:#616161,color:#FFFFFF
+    style n19 fill:#F0DB4F,color:#424242
+    style n20 fill:#0270B2
+    style n9 stroke:#616161,fill:#424242
+    style n14 stroke:#616161,fill:#CD6799,color:#FFFFFF
+    style n12 stroke:#616161,fill:#424242
+    style n13 stroke:#616161,fill:#424242
+    style n15 fill:#424242,stroke:#616161
+    style n16 fill:#424242,stroke:#616161
+    style n17 fill:#F48120,stroke:#616161,color:#FFFFFF
+    style n18 fill:#424242,stroke:#616161
+    linkStyle 0 stroke:#616161,fill:none
+    linkStyle 1 stroke:#616161,fill:none
+    linkStyle 2 stroke:#616161,fill:none
+    linkStyle 3 stroke:#616161,fill:none
+    linkStyle 4 stroke:#616161,fill:none
+    linkStyle 5 stroke:#616161,fill:none
+    linkStyle 6 stroke:#616161,fill:none
+    linkStyle 7 stroke:#616161,fill:none
+    linkStyle 8 stroke:#616161,fill:none
+    linkStyle 9 stroke:#616161,fill:none
+    linkStyle 10 stroke:#616161,fill:none
+    linkStyle 11 stroke:#616161,fill:none
+    linkStyle 12 stroke:#616161,fill:none
+    linkStyle 13 stroke:#616161,fill:none
+    linkStyle 14 stroke:#616161,fill:none
+    linkStyle 15 stroke:#616161,fill:none
+    linkStyle 16 stroke:#616161,fill:none
+    linkStyle 17 stroke:#616161,fill:none
+    linkStyle 18 stroke:#616161,fill:none
 ```
 
 To edit this interactively, go [here](https://mermaid.ai/play) and paste the code inside the `mermaid` code block above.
