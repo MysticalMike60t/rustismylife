@@ -5,27 +5,18 @@ on:
     branches: [ main ]
 
 jobs:
-  build:
+  build-and-deploy:
     runs-on: ubuntu-latest
-
     steps:
-      - uses: actions/checkout@v4
-
       - name: Install Rust
         uses: dtolnay/rust-toolchain@stable
         with:
           targets: wasm32-unknown-unknown
-
       - name: Install trunk
-        run: cargo install --git https://github.com/trunk-rs/trunk trunk
-
+        run: cargo install trunk --locked
+      - uses: actions/checkout@v4
       - name: Build
         run: trunk build --release
-  deploy:
-    needs: build
-    runs-on: ubuntu-latest
-    timeout-minutes: 60
-    steps:
       - uses: actions/checkout@v4
       - name: Build & Deploy Worker
         uses: cloudflare/wrangler-action@v3
