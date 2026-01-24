@@ -1,8 +1,6 @@
-use yew::{
-    prelude::*,
-    classes,
-    html
-};
+// TODO: Add router-like routing (reactjs shit)
+
+use yew::{classes, html, prelude::*};
 
 #[component]
 fn App() -> Html {
@@ -25,5 +23,6 @@ fn App() -> Html {
 }
 
 fn main() {
+    //:& Renders the app
     yew::Renderer::<App>::new().render();
 }
