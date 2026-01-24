@@ -16,7 +16,7 @@ jobs:
           targets: wasm32-unknown-unknown
       - name: Install binstall
         run: cargo install cargo-binstall
-      - name: Install trunk
+      - name: Install trunk # Add fail handling in case binstall fails (cargo install trunk)
         run: cargo binstall trunk
       - name: Build
         run: trunk build --release --dist dist
