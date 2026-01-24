@@ -19,12 +19,6 @@
 ---
 config:
   layout: elk
-  elk:
-    mergeEdges: true
-    nodePlacementStrategy: LINEAR_SEGMENTS
-  flowchart:
-    htmlLabels: false
-    defaultRenderer: "elk"
   look: classic
   theme: redux-dark
 ---
