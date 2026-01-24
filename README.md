@@ -2,6 +2,9 @@
 <p align="center" name="version-badges">
   <img src="https://img.shields.io/badge/rustup%20toolchain->=%20v1.93.0-orange.svg" />
 </p>
+<p align="center" name="status-badges">
+  <img src="https://github.com/MysticalMike60t/rustismylife/actions/workflows/deploy.yml/badge.svg" />
+</p>
 
 <!-- prettier-ignore-start -->
 > [!WARNING]
