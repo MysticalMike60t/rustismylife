@@ -1,0 +1,21 @@
+@use "../../variables" as *;
+
+.button-style-default {
+    padding: 10px 20px;
+    border-radius: 5px;
+    outline: 2px solid $outline-color;
+    border: none;
+    background: $background-color;
+    cursor: pointer;
+    color: $button-text-color;
+    transition: 500ms ease all;
+    box-shadow: 0 0 0 0 $background-color-dark;
+    transform: translateY(0);
+}
+
+.button-style-default:hover {
+    color: $accent-color;
+    outline: 2px solid $accent-color-maybedark;
+    box-shadow: 0 5px 5px 1px $background-color-dark;
+    transform: translateY(-5px);
+}

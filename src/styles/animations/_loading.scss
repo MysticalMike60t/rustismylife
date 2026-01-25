@@ -1,0 +1,38 @@
+@keyframes delay {
+    0% {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    75% {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes remove_loading {
+    0% {
+        opacity: 1;
+        transform: translateY(0) translate(-50%, -50%);
+    }
+    75% {
+        opacity: 1;
+        transform: translateY(0) translate(-50%, -50%);
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(50px) translate(-50%, -50%);
+    }
+}
+
+@keyframes fadein {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}

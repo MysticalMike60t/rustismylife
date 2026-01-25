@@ -1,0 +1,23 @@
+@use "../variables" as *;
+
+*,*::before,*::after {
+    box-sizing: border-box;
+}
+
+/*:& Removing annoying fucking padding everywhere, and set default font */
+* {
+    font-family: "m+";
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background: $background-color;
+    animation: fadein 1s ease-in-out forwards;
+    overflow: hidden;
+}
