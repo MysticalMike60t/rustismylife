@@ -11,6 +11,9 @@
     --accent-color-dark: #712b0c;
     --accent-color-darker: #232120;
     --background-color: #161515;
+    --background-color-dark: #111010;
+    --outline-color: #333131;
+    --button-text-color: #807a7a;
     --crabwalk-distance: 200px;
 }
 
@@ -261,4 +264,24 @@ body {
     100% {
         opacity: 1;
     }
+}
+
+button {
+    padding: 10px 20px;
+    border-radius: 5px;
+    outline: 2px solid var(--outline-color);
+    border: none;
+    background: var(--background-color);
+    cursor: pointer;
+    color: var(--button-text-color);
+    transition: 500ms ease all;
+    box-shadow: 0 0 0 0 var(--background-color-dark);
+    transform: translateY(0);
+}
+
+button:hover {
+    color: var(--accent-color);
+    outline: 2px solid var(--accent-color-maybedark);
+    box-shadow: 0 5px 5px 1px var(--background-color-dark);
+    transform: translateY(-5px);
 }
