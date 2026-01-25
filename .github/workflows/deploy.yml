@@ -7,9 +7,11 @@ on:
       - "Cargo.toml"
       - "Cargo.lock"
       - "src/**"
-      - "assets/**"
+      - "public/**"
       - "index.html"
-      - "worker/**"
+      - "wrangler.jsonc"
+      - "Trunk.toml"
+      - ".github/**"
 
 concurrency:
   group: deploy-main
