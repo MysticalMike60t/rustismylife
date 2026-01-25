@@ -6,8 +6,8 @@ use crate::components::images;
 
 mod components;
 
-#[component]
-fn App() -> Html {
+#[component(App)]
+fn app() -> Html {
     html! {
         <>
             <div class={classes!("loading")}>
