@@ -18,7 +18,7 @@ fn App() -> Html {
                 </h1>
             </div>
             <div class={classes!("wrapper")}>
-                <images::gear::SVG class="g" color="#232120" />
+                <images::gear::SVG class="gear-image-svg" color="#232120" />
                 <img class={classes!("m")} src="assets/images/goober.png" alt="" />
                 <h1>{"UNDER CONSTRUCTION"}</h1>
             </div>
