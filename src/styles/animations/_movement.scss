@@ -1,0 +1,29 @@
+@use "../variables" as *;
+
+/*:& Animations */
+@keyframes pluhwalk {
+    0% {
+        transform: translateX(0);
+    }
+    25% {
+        transform: translateX(calc($crabwalk-distance)*-1);
+    }
+    50% {
+        transform: translateX(0);
+    }
+    75% {
+        transform: translateX($crabwalk-distance);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@keyframes spinny {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}

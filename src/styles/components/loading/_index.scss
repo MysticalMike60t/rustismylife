@@ -1,0 +1,25 @@
+@use "../../variables" as *;
+
+.loading {
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    animation: remove_loading 4s ease-in-out forwards;
+}
+
+.loading span {
+    font-size: 0.8em;
+}
+
+.loading span:nth-child(1) {
+    color: $accent-color-maybedark;
+}
+
+.loading span:nth-child(2) {
+    color: $accent-color-dark;
+}
+
+.loading span:nth-child(3) {
+    color: $accent-color;
+}

@@ -1,6 +1,6 @@
 [serve]
 # INFO: The address to serve on LAN.
-address = "127.0.0.1"
+addresses = ["127.0.0.1"]
 # INFO: The address to serve on WAN.
 # INACTIVE: address = "0.0.0.0"
 # INFO: The port to serve on.

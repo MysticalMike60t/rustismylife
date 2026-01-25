@@ -1,0 +1,135 @@
+@use "../../variables" as *;
+
+.wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    animation: delay 5s ease-in-out forwards;
+}
+
+/* TODO: Reduce amount of user-select: none; type shit since it makes code long */
+
+.wrapper .m {
+    max-width: 400px;
+    min-width: 200px;
+    transform: translateX(0);
+    animation: pluhwalk 5s ease-out infinite;
+    position: relative;
+    z-index: 99;
+    user-select: none;
+    -ms-user-select: none;
+    -moz-user-select: none;
+    -webkit-user-drag: none;
+    -webkit-user-modify: none;
+    -webkit-user-select: none;
+    -moz-user-focus: none;
+    -moz-user-input: none;
+    -moz-user-modify: none;
+    -ms-touch-select: none;
+    -moz-window-dragging: none;
+    pointer-events: none;
+}
+
+.wrapper h1 {
+    max-width: 100vw;
+    word-wrap: break-word;
+    font-size: calc(5em);
+    font-weight: 900;
+    text-align: center;
+    letter-spacing: 2px;
+    color: $accent-color;
+    margin: 0;
+    transform: translateY(-80px);
+    z-index: 2;
+    text-shadow: 0 -10px 0 $accent-color-dark,
+    0 -9px 0 $accent-color-dark,
+    0 -8px 0 $accent-color-dark,
+    0 -7px 0 $accent-color-dark,
+    0 -6px 0 $accent-color-dark,
+    0 -5px 0 $accent-color-dark,
+    0 -4px 0 $accent-color-dark,
+    0 -3px 0 $accent-color-dark,
+    0 -2px 0 $accent-color-dark,
+    0 -1px 0 $accent-color-dark;
+    user-select: none;
+    -ms-user-select: none;
+    -moz-user-select: none;
+    -webkit-user-drag: none;
+    -webkit-user-modify: none;
+    -webkit-user-select: none;
+    -moz-user-focus: none;
+    -moz-user-input: none;
+    -moz-user-modify: none;
+    -ms-touch-select: none;
+    -moz-window-dragging: none;
+    pointer-events: none;
+}
+
+.wrapper h1::before {
+    content: "";
+    width: 70vw;
+    max-width: 85%;
+    height: 2px;
+    left: 50%;
+    top: -75%;
+    transform: translateX(-50%);
+    background: $accent-color-dark;
+    position: absolute;
+    user-select: none;
+    -ms-user-select: none;
+    -moz-user-select: none;
+    -webkit-user-drag: none;
+    -webkit-user-modify: none;
+    -webkit-user-select: none;
+    -moz-user-focus: none;
+    -moz-user-input: none;
+    -moz-user-modify: none;
+    -ms-touch-select: none;
+    -moz-window-dragging: none;
+    pointer-events: none;
+}
+
+.wrapper h1::after {
+    content: "";
+    width: 100vw;
+    height: 50vw;
+    left: 50%;
+    top: -75%;
+    transform: translateX(-50%);
+    background: $background-color;
+    z-index: -2;
+    position: absolute;
+    user-select: none;
+    -ms-user-select: none;
+    -moz-user-select: none;
+    -webkit-user-drag: none;
+    -webkit-user-modify: none;
+    -webkit-user-select: none;
+    -moz-user-focus: none;
+    -moz-user-input: none;
+    -moz-user-modify: none;
+    -ms-touch-select: none;
+    -moz-window-dragging: none;
+    pointer-events: none;
+}
+
+.wrapper .gear-image-svg {
+    min-width: 600px;
+    max-width: 30vw;
+    animation: spinny 60s linear infinite;
+    position: absolute;
+    z-index: -1;
+    user-select: none;
+    -ms-user-select: none;
+    -moz-user-select: none;
+    -webkit-user-drag: none;
+    -webkit-user-modify: none;
+    -webkit-user-select: none;
+    -moz-user-focus: none;
+    -moz-user-input: none;
+    -moz-user-modify: none;
+    -ms-touch-select: none;
+    -moz-window-dragging: none;
+    pointer-events: none;
+}
