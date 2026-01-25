@@ -1,26 +1,55 @@
 name: Deploy
 
-# TODO: Make builds & deploys not be triggered by .md, comments, etc
 on:
   push:
     branches: [ main ]
+    paths:
+      - "Cargo.toml"
+      - "Cargo.lock"
+      - "src/**"
+      - "assets/**"
+      - "index.html"
+      - "worker/**"
+
+concurrency:
+  group: deploy-main
+  cancel-in-progress: true
+
+permissions:
+  contents: read
 
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
+
     steps:
       - uses: actions/checkout@v4
+
       - name: Install Rust
         uses: dtolnay/rust-toolchain@stable
         with:
           targets: wasm32-unknown-unknown
+
+      - name: Cache cargo
+        uses: actions/cache@v4
+        with:
+          path: |
+            ~/.cargo/registry
+            ~/.cargo/git
+            target
+          key: ${{ runner.os }}-cargo-${{ hashFiles('**/Cargo.lock') }}
+
       - uses: cargo-bins/cargo-binstall@main
-      - name: Install trunk # Add fail handling in case binstall fails (cargo install trunk)
-        run: cargo binstall trunk
+
+      - name: Install trunk
+        run: cargo binstall trunk -y || cargo install trunk
+
       - name: Build
         run: trunk build --release
+
       - name: Check if dist directory exists
         run: ls -la dist
+
       - name: Build & Deploy Worker
         uses: cloudflare/wrangler-action@v3
         with:
