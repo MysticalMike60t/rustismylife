@@ -1,6 +1,10 @@
 // TODO: Add router-like routing (reactjs shit)
 
-use yew::{classes, html, prelude::*};
+use yew::{classes, component, html, Html};
+
+use crate::components::images;
+
+mod components;
 
 #[component]
 fn App() -> Html {
@@ -14,7 +18,7 @@ fn App() -> Html {
                 </h1>
             </div>
             <div class={classes!("wrapper")}>
-                <img class={classes!("g")} src="assets/images/gear.svg" alt="" />
+                <images::gear::SVG class="g" color="#232120" />
                 <img class={classes!("m")} src="assets/images/goober.png" alt="" />
                 <h1>{"UNDER CONSTRUCTION"}</h1>
             </div>
