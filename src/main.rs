@@ -10,13 +10,7 @@ mod components;
 fn app() -> Html {
     html! {
         <>
-            <div class={classes!("loading")}>
-                <h1>
-                    <span>{"system"}</span>
-                    <span>{"::"}</span>
-                    <span>{"loading"}</span>
-                </h1>
-            </div>
+            <div class={classes!("loading")}></div>
             <div class={classes!("wrapper")}>
                 <images::gear::SVG class="gear-image-svg" color="#232120" />
                 <img class={classes!("m")} src="assets/images/goober.png" alt="" />
